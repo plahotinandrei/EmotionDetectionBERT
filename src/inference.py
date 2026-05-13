@@ -1,8 +1,9 @@
 from transformers import pipeline
 
-classifier = pipeline("text-classification", model="../models/emotion_model/checkpoint-1484")
+# Для локальной модели
+#classifier = pipeline("text-classification", model="../models/emotion_model/checkpoint-1484")
 # Загрузить модель можно с huggingface hub
-#classifier = pipeline("text-classification", model="plakhotin94/emotion-bert")
+classifier = pipeline("text-classification", model="plakhotin94/emotion-bert")
 
 LABELS = {
     "LABEL_0": "Радость",
